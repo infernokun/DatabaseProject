@@ -60,10 +60,17 @@ void userInput() {
 }
 
 void runQuery(int queryNum) {
+    ifstream userpass;
+    
+    userpass.open("userpass.txt);
+                  
+    string username, password;
+                 
+    userpass >> username >> password;
 
     try {
         // connect to sql server
-        Session sess("localhost", 33060, "infernokun", "RAINBOWsixSIEGE##11");
+        Session sess("localhost", 33060, username, password);
 
         // use a database
         sess.sql("use taco").execute();
