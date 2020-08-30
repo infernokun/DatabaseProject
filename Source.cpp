@@ -62,7 +62,7 @@ void userInput() {
 void runQuery(int queryNum) {
     ifstream userpass;
     
-    userpass.open("userpass.txt);
+    userpass.open("userpass.txt");
                   
     string username, password;
                  
